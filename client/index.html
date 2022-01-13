@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat app</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"
+      integrity="sha512-oFOCo2/3DtjrJG4N27BjSLQWoiBv171sK6a+JiWjp/7agxC2nCUP358AqzxkBUb5jX8g6CYLPdSKQTbC0weCwA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script to emit/receive events from socket.io server -->
+    <script defer src="chat.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="center">Chat app</h1>
+
+      <!-- Chat messages will be appended inside this container -->
+      <div id="chatContainer"></div>
+
+      <!-- Form to enter and submit new chat messages -->
+      <div class="center">
+        <form id="messageForm">
+          <input class="input center" type="text" id="messageInput" />
+          <button class="btn" type="submit" id="sendBtn">Send!</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
